@@ -1,6 +1,6 @@
 #Ansible Playground #
 
-![tmuxinator ansible-playground](https://drive.google.com/file/d/0BzEjd58Iy4jvUmlTUGVsbVBCSFE/view?usp=sharing)
+![tmuxinator ansible-playground](https://s30.postimg.org/ajwn8n0up/ansible-playground.png)
 
 This is a simple utility repository to bootstrap Ansible playground. It uses VirtualBox and Vagrant to provision:
 
@@ -30,8 +30,8 @@ This will launch the provisioned 3 Vagrant VM's
 
 In order for the Master Orchestrator to Communicate with the DevOps Server
 
-Generate the SSH key in the master using command ssh-keygen and copy the generated \s\s
-id_rsa.pub key to the ~/.ssh/Authorized to devops1 and devops2 machines . \s\s
+Generate the SSH key in the master using command ssh-keygen and copy the generated 
+id_rsa.pub key to the ~/.ssh/Authorized to devops1 and devops2 machines .
 In our case it will be 192.168.100.101 and 192.168.100.102 respectively.
 
 The Passwords for all Vagrant VM's would be the same as user name.
@@ -53,7 +53,7 @@ vagrant@master:~$ ansible dev -i /etc/ansible/hosts -m command -a "uptime" -u va
  ###Setting Up tmuxinator###
 
 ```
-Visit the [tmuxinator](https://github.com/tmuxinator/tmuxinator) github page and \s\s
+Visit the [tmuxinator](https://github.com/tmuxinator/tmuxinator) github page and 
  follow the instructions on how to set it up
 ```
 
