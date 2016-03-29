@@ -50,11 +50,12 @@ vagrant@master:~$ ansible dev -i /etc/ansible/hosts -m command -a "uptime" -u va
 
  ```
 
- ###Setting Up tmuxinator###
+###Setting Up tmuxinator###
 
 ```
 Visit the [tmuxinator](https://github.com/tmuxinator/tmuxinator) github page and 
- follow the instructions on how to set it up
+follow the instructions on how to set it up
+
 ```
 
 
