@@ -14,32 +14,34 @@ This is a simple utility repository to bootstrap Ansible playground. It uses Vir
 3. Clone this repository:
 ```
 $ git clone git@github.com:sureshn/ansible-playground.git
-$ cd salt-playground
+$ cd ansible-playground
 ```
-4. Start VMs (it will create 3 VMs and provision Ansible). There will also be a hosts file which will be created at /etc/ansible/hosts)
-5. $ cd ansible-playground
+4. Start VMs (it will create 3 VMs and provision Ansible). There will also be a hosts file which will be created at /etc/ansible/hosts) which defines a new group named `dev` which contains the DevOps servers.
+5. Create and provision all VM's:
 ```
 $ vagrant up && vagrant provision
 ```
 
 Once the VM's are up and running, install [tmuxinator](https://github.com/tmuxinator/tmuxinator) and run `mux`. This will connect to the provisioned 3 Vagrant VM's.
 
-```
-
-In order for the Master Orchestrator to Communicate with the DevOps Server
-
-Generate the SSH key in the master using command ssh-keygen and copy the generated 
-id_rsa.pub key to the ~/.ssh/Authorized to devops1 and devops2 machines .
-In our case it will be 192.168.100.101 and 192.168.100.102 respectively.
-
-The Passwords for all Vagrant VM's would be the same as user name.
+In order for the Master Orchestrator to Communicate with the DevOps Servers, generate a new SSH key in the master shell using `ssh-keygen` and copy the new key to the DevOps machines:
 
 ```
+vagrant@master:~$ ssh-keygen
+...
+vagrant@master:~$ ssh-copy-id vagrant@192.168.100.101
+...
+vagrant@master:~$ ssh-copy-id vagrant@192.168.100.102
+...
+```
+
+The password for the `vagrant` user on all machines is `vagrant`.
+
 ###Usage###
 
+```
 vagrant@master:~$ ansible dev -i /etc/ansible/hosts -m command -a "uptime" -u vagrant 
 
-```
 192.168.100.101 | success | rc=0 >>
 07:49:11 up  1:22,  2 users,  load average: 0.00, 0.01, 0.05
 
