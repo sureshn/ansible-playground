@@ -9,15 +9,15 @@ This is a simple utility repository to bootstrap Ansible playground. It uses Vir
 
 ###Installation###
 
-1. Install the latest version of [VirtuaBox](https://www.virtualbox.org/wiki/Downloads) and VirtualBox extension
-2. Install [Vagrant](http://www.vagrantup.com/downloads.html)
-3. Clone this repository:
+* Install the latest version of [VirtuaBox](https://www.virtualbox.org/wiki/Downloads) and VirtualBox extension
+* Install [Vagrant](http://www.vagrantup.com/downloads.html)
+* Clone this repository:
 ```
 $ git clone git@github.com:sureshn/ansible-playground.git
 $ cd ansible-playground
 ```
-4. Start VMs (it will create 3 VMs and provision Ansible). There will also be a hosts file which will be created at /etc/ansible/hosts) which defines a new group named `dev` which contains the DevOps servers.
-5. Create and provision all VM's:
+* Start VMs (it will create 3 VMs and provision Ansible). There will also be a hosts file which will be created at /etc/ansible/hosts) which defines a new group named `dev` which contains the DevOps servers.
+* Create and provision all VM's:
 ```
 $ vagrant up && vagrant provision
 ```
@@ -40,16 +40,11 @@ The password for the `vagrant` user on all machines is `vagrant`.
 ###Usage###
 
 ```
-vagrant@master:~$ ansible dev -i /etc/ansible/hosts -m command -a "uptime" -u vagrant 
+vagrant@master:~$ ansible dev -a "uptime"
 
 192.168.100.101 | success | rc=0 >>
 07:49:11 up  1:22,  2 users,  load average: 0.00, 0.01, 0.05
 
 192.168.100.102 | success | rc=0 >> 
  07:49:11 up  1:19,  2 users,  load average: 0.00, 0.01, 0.05
-
- ```
-
-###Setting Up tmuxinator###
-
 ```
