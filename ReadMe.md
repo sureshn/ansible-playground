@@ -22,9 +22,7 @@ $ cd salt-playground
 $ vagrant up && vagrant provision
 ```
 
-Once the VM's are up and running 
-Run mux start tmux_profile.yml
-This will launch the provisioned 3 Vagrant VM's
+Once the VM's are up and running, install [tmuxinator](https://github.com/tmuxinator/tmuxinator) and run `mux`. This will connect to the provisioned 3 Vagrant VM's.
 
 ```
 
@@ -53,9 +51,3 @@ vagrant@master:~$ ansible dev -i /etc/ansible/hosts -m command -a "uptime" -u va
 ###Setting Up tmuxinator###
 
 ```
-Visit the [tmuxinator](https://github.com/tmuxinator/tmuxinator) github page and 
-follow the instructions on how to set it up
-
-```
-
-
