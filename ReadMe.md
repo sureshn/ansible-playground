@@ -30,7 +30,7 @@ This will launch the provisioned 3 Vagrant VM's
 
 In order for the Master Orchestrator to Communicate with the DevOps Server
 
-Generate the SSH key in the master using command ssh-keygen and copy the generated id_rsa.pub key to the ~/.ssh/Authorized to devops1 and devops2 machines . In our case it will be 192.168.100.101 and 192.168.100.102 respectively.
+Generate the SSH key in the master using command ssh-keygen and copy the generated \sid_rsa.pub key to the ~/.ssh/Authorized to devops1 and devops2 machines . \sIn our case it will be 192.168.100.101 and 192.168.100.102 respectively.
 
 The Passwords for all Vagrant VM's would be the same as user name.
 
@@ -51,7 +51,7 @@ vagrant@master:~$ ansible dev -i /etc/ansible/hosts -m command -a "uptime" -u va
  ###Setting Up tmuxinator###
 
 ```
-Visit the [tmuxinator](https://github.com/tmuxinator/tmuxinator) github page and follow the instructions on how to set it up
+Visit the [tmuxinator](https://github.com/tmuxinator/tmuxinator) github page and \s follow the instructions on how to set it up
 ```
 
 
