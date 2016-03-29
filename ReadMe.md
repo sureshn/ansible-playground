@@ -9,7 +9,7 @@ This is a simple utility repository to bootstrap Ansible playground. It uses Vir
 
 ###Installation###
 
-1. Install the latest version of [VirtuaBox](https://www.virtualbox.org/wiki/Downloads) and VirtualBox extension
+1. Install the latest version of [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and VirtualBox extension
 2. Install [Vagrant](http://www.vagrantup.com/downloads.html)
 3. Clone this repository:
 ```
