@@ -9,15 +9,9 @@ This is a simple utility repository to bootstrap Ansible playground. It uses Vir
 
 ###Installation###
 
-<<<<<<< HEAD
 * Install the latest version of [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and VirtualBox extension
 * Install [Vagrant](http://www.vagrantup.com/downloads.html)
 * Clone this repository:
-=======
-1. Install the latest version of [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and VirtualBox extension
-2. Install [Vagrant](http://www.vagrantup.com/downloads.html)
-3. Clone this repository:
->>>>>>> 5c3ce0fa207882cf5eb4be0841043257fa746264
 ```
 $ git clone git@github.com:sureshn/ansible-playground.git
 $ cd ansible-playground
